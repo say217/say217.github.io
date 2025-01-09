@@ -1,0 +1,142 @@
+
+.wrap {
+    display: flex;
+    margin: auto;
+    height: 100vh;
+    width: 70%;
+    align-items: center; /* Ensures content is centered vertically */
+    justify-content: center; /* Ensures content is centered horizontally */
+  
+    svg {
+      width: 100%;
+    }
+  }
+  
+
+  .line {
+    animation: line 2.5s ease-in-out infinite alternate both;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 350;
+  }
+  
+  .line--2 {
+    animation-delay: 1.25s;
+  }
+  
+  .line--3 {
+    animation-delay: -0.625s;
+  }
+  
+  .line--4 {
+    animation-delay: -1.875s;
+  }
+  
+  @keyframes line {
+    from {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  
+  
+  .float {
+    animation: float 2.5s ease infinite alternate both;
+  }
+  
+  .float--2 {
+    animation-delay: -1.875s;
+  }
+  
+  .float--3 {
+    animation-delay: 1.25s;
+  }
+  
+  .float--4 {
+    animation-delay: 0.625s;
+  }
+  
+  @keyframes float {
+    from {
+      transform: translateY(-15px);
+    }
+  }
+  
+  
+  
+  .hover {
+    animation: hover 2.5s ease infinite alternate both;
+  }
+  
+  .hover--2 {
+    animation-delay: -1.25s;
+  }
+  
+  @keyframes hover {
+    from {
+      transform: translateY(3px);
+    }
+    to {
+      transform: translateY(-3px);
+    }
+  }
+  
+  
+  .shimmy {
+    animation: shimmy 2.5s ease infinite alternate both;
+  }
+  
+  .shimmy--2 {
+    animation-delay: -1.25s;
+  }
+  
+  @keyframes shimmy {
+    from {
+      transform: translate(10px, 3px);
+    }
+  }
+  
+  
+  
+  .instruct--1 {
+    animation: instruct--1 2.5s ease-out infinite alternate both;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+  }
+  
+  @keyframes instruct--1 {
+    from {
+      fill: transparent;
+    }
+    to {
+      fill: white;
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .instruct--2 {
+    animation: instruct--2 2.5s ease-in-out infinite alternate both;
+  }
+  
+  @keyframes instruct--2 {
+    0%,
+    33% {
+      opacity: 0;
+    }
+  }
+  
+
+  
+  .color {
+    animation: color 2.5s linear infinite alternate both;
+    fill: #fff;
+  }
+  
+  @keyframes color {
+    to {
+      fill: #e6e6e6;
+    }
+  }
+  
+
+
+

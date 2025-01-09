@@ -1,0 +1,1562 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sayak samanta</title>
+    <link rel="icon" href=
+            "https://yt3.ggpht.com/a-/AAuE7mCJGyQm_JWllGkYhnlyLf8fmB7D0ePWC1BrZg=s900-mo-c-c0xffffffff-rj-k-no"
+          type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Link Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap CSS for Glyphicon icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+   <link href="profile.css" rel="stylesheet">
+   <link href="submit%20button.css"   rel="stylesheet">
+    <link href="image%20slider.css" rel="stylesheet">
+    <link href="image_cards.css" rel="stylesheet">
+    <link href="skill-section.css" rel="stylesheet">
+    <link href="color text cards in profile.css" rel="stylesheet">
+    <link href="animation.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000, #000a1f); /* Darker gradient from black to a deeper dark blue */
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.5s ease; /* Smooth transition for background change */
+
+        }
+        /* Optional: Add a subtle texture to the background for more depth */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05); /* Lighter overlay for subtle texture */
+            opacity: 0.1; /* Slight opacity for subtle texture */
+            pointer-events: none; /* Allows interaction with underlying content */
+        }
+
+        /* Header with background image */
+        header {
+
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Navbar Styling */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #ff5252;
+            margin-left:200px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            margin:  30px;
+            position: relative;
+        }
+
+        /* Stylish hover effect for nav items */
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 10px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #ff5252;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+
+        .main-content {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            padding: 10px 20px;
+            background-color: #ff5252;
+            border: none;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: white;
+            color: #ff5252;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/433/303/desktop-wallpaper-black-theme-posted-by-christopher-mercado-dark-mode-pc.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            height: 100vh;
+        }
+
+        /* Add this to your existing CSS in the <style> section */
+
+        /* CSS for Circular Ring Animation */
+        .profile-container {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 6px solid #ff5252;
+            overflow: hidden;
+            animation: profileAnim 1s ease-in-out forwards;
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @keyframes profileAnim {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+
+        /* Keyframes for the h1 entrance effect */
+        @keyframes slideUpFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply the animation to the h1 in the hero section */
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 7rem;
+            margin-top: 270px;
+            transition: color 0.3s ease;
+            opacity: 0; /* Initial state for fade-in */
+            animation: slideUpFadeIn 1.5s ease-out forwards; /* Slide-up and fade-in animation */
+        }
+
+        .hero p {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .hero h1:hover {
+            color:#FF014F;
+        }
+
+        .scroll-section {
+            width: 95%;
+            margin: 20px auto;
+            padding: 0px;
+            background-color: rgba(255, 255, 255, 0.0);
+            border: 1px solid rgba(255, 255, 255, 0.0);
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .scroll-section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body{
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 1170px;
+            margin:auto;
+        }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        ul{
+            list-style: none;
+        }
+        .footer{
+            background: linear-gradient(120deg, #0f0f0f, #252525, #3d3d3d);
+
+
+            padding: 70px 0;
+        }
+        .footer-col{
+            width: 25%;
+            padding: 0 15px;
+        }
+        .footer-col h4{
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+        .footer-col h4::before{
+            content: '';
+            position: absolute;
+            left:0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+        .footer-col ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        .footer-col ul li a{
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        .footer-col ul li a:hover{
+            color: #ffffff;
+            padding-left: 8px;
+        }
+        .footer-col .social-links a{
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255,255,255,0.2);
+            margin:0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+        .footer-col .social-links a:hover{
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        /*responsive*/
+        @media(max-width: 767px){
+            .footer-col{
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+        @media(max-width: 574px){
+            .footer-col{
+                width: 100%;
+            }
+        }
+
+        /* Sidebar Toggle Button */
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ff6363;
+            z-index: 1000;
+            background: none;
+            border: none;
+            transition: transform 0.3s ease; /* Added animation for scaling */
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d); /* Dark gradient */
+            overflow-x: hidden;
+            transition: width 0.5s ease, background 0.5s; /* Smooth transition */
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        /* Underline hover effect */
+        .sidebar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: linear-gradient(135deg, #ffcf00, #fa4299); /* Gradient underline */
+            transition: width 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: lightblue;
+        }
+
+        .sidebar a:hover::after {
+            width: 100%;
+        }
+
+        /* Open button style */
+        .open-btn {
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1100;
+            transition: transform 0.3s ease; /* Added animation for scaling */
+        }
+
+        .open-btn:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        /* Close button style */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+            cursor: pointer;
+            color: white;
+            transition: transform 0.3s ease; /* Added animation for scaling */
+        }
+
+        .close-btn:hover {
+            transform: scale(1.1); /* Slightly enlarge on hover */
+        }
+
+        /* Blur effect on main content */
+        .sidebar-open ~ .main-content {
+            filter: blur(3px);
+            transition: filter 0.5s ease; /* Smooth transition for blur */
+        }
+
+        /* Sidebar open animation */
+        .sidebar-open {
+            width: 250px; /* Adjust width as needed */
+        }
+
+
+        /* Card container for scroll-section */
+        /* Navbar Styling */
+
+
+
+        /* Container styling for each section */
+        /* Container styling for each section */
+        .about-container {
+            display: flex;
+            align-items: center;
+            max-width: 1600px;
+
+            margin: 120px auto;
+            padding: 30px;
+            gap: 60px;
+            opacity: 0;
+            transform: translateX(-50px); /* Starts slightly off-screen */
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        /* Scroll reveal activation */
+        .scroll-section.scroll-active .about-container {
+            opacity: 1;
+            transform: translateX(0);
+            margin-top: 100px;
+        }
+
+        /* Text section styling */
+        .about-text {
+            flex: 1;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Title styling with animation */
+        .about-text h2 {
+            position: relative;
+            font-size: 5rem; /* Increase the font size for better visibility */
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Blue line under h2 */
+        .about-text h2::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #ff5252; /* Red underline color */
+            bottom: -5px; /* Position below the text */
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for h2 */
+        .about-text h2:hover::before {
+            transform: scaleX(1); /* Expands line on hover */
+        }
+
+        .about-text h2:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        /* Paragraph text animation */
+        .about-text p {
+            opacity: 0;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            transform: translateX(-50px); /* Starts off-screen */
+            animation: textFadeIn 1s forwards ease 0.3s; /* Delayed for a staggered effect */
+        }
+
+        /* Image section styling */
+        .about-image {
+            flex: 1;
+            max-width: 720px;
+            max-height: 470px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Animation Keyframes */
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+
+
+        /* Contact Section Styling */
+        /* Container for contact and info section */
+        /* Container for contact and info section */
+        .contact-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(25, 25, 25, 0.9), rgba(40, 40, 40, 0.9));
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            margin: 50px auto;
+            margin-left:60px;
+            margin-right:60px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Add hover effect for the container */
+        .contact-container:hover {
+            transform: scale(1.02);
+        }
+
+        /* Info Section Styling */
+        .info-section {
+            max-width: 50%; /* Takes half of the container width */
+            padding-right: 20px; /* Space between sections */
+            color: #eee;
+        }
+
+        .info-section h2 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .info-section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        /* Contact Section Styling */
+        .contact-section {
+            max-width: 40%; /* Takes less space than the info section */
+            padding-left: 20px; /* Space between sections */
+            border-left: 3px solid rgba(255, 255, 255, 0.3); /* Decorative border */
+            opacity: 0; /* Start hidden for fade-in effect */
+            transform: translateY(50px); /* Initial position for scroll effect */
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
+        }
+
+        /* Fade-in effect on scroll */
+        .scroll-fade {
+            opacity: 1; /* Set to 1 when visible */
+            transform: translateY(0); /* Reset position */
+        }
+
+        /* Form Styling */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .contact-form:hover {
+            background: rgba(255, 255, 255, 0.2); /* Darker on hover */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            background: rgba(255, 255, 255, 0.4); /* Lighter on focus */
+            outline: none;
+        }
+
+
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column; /* Stack sections on smaller screens */
+            }
+            .info-section, .contact-section {
+                max-width: 100%;
+                padding: 0;
+                margin-bottom: 20px; /* Space between stacked sections */
+            }
+        }
+
+        /* Background and container styling */
+
+        .custom-h2 {
+            font-size: 5rem; /* Adjust size as needed */
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #1e90ff, #00bfff); /* Gradient from Dodger Blue to Deep Sky Blue */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Make text color transparent to show the gradient */
+        }
+
+        .custom1-h2 {
+            font-size: 5rem; /* Adjust size as needed */
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #e3f2fd, #b3e5fc, #81d4fa);
+
+
+            /* Gradient from Dodger Blue to Deep Sky Blue */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; /* Make text color transparent to show the gradient */
+        }
+
+
+ /* CSS for the new section */
+ .new-section-container {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 30px;
+    gap: 20px;
+}
+
+.new-section-text {
+    flex: 1;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-section-text h2 {
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.new-section-text h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff5252;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.new-section-text h2:hover::before {
+    transform: scaleX(1);
+}
+
+.new-section-text h2:hover {
+    transform: scale(1.05);
+}
+
+.new-section-text p {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.new-section-image {
+    flex: 1;
+    max-width: 720px;
+    max-height: 470px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.new-section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.new-section-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+/* icon image */
+.round-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.round-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.round-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+    border-color: #888;
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </ul>
+    </nav>
+
+</header>
+<!-- Hero Section with Circular Image -->
+<section class="hero">
+    <div class="profile-container">
+        <img src="https://th.bing.com/th/id/OIP.6w9aVrDl-oqiR0j8m5heKgHaHa?rs=1&pid=ImgDetMain" alt="Profile Picture">
+    </div>
+    <h1>Sayak Samanta</h1>
+    <p>A Creative Freelancer & Full Stack Developer</p>
+</section>
+<button class="toggle-button" onclick="toggleSidebar()">&#9776;</button>
+
+<!-- Sidebar Navigation -->
+
+<!-- Sidebar Trigger Button -->
+<button class="open-btn" onclick="toggleSidebar()">&#9776; </button>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+    <a href="#home"><i class="fas fa-home"></i> Home</a><br><br>
+
+    <a href="#about"><i class="fas fa-user"></i> About</a><br><br>
+    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a><br><br>
+    <a href="#projects"><i class="fas fa-file-alt"></i> Projects</a><br><br>
+
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+</div>
+
+
+
+
+
+
+<!-- Sections -->
+<section id="home" class="scroll-section">
+    <!-- welcome-page -->
+    <div class="wlcm-page" id="wlcm">
+        <div class="w-l-sec">
+            <div class="cont-box1">
+                <span style="color: gray;font-weight: 900; font-size:50px; margin-top:50px;">WELCOME TO MY WORLD</span><br>
+                <h1 class="ah-headline">
+                    <span style="color: white;">Hi, i`m <span style="color: #FF014F;">Sayak samanta</span></span> <br>
+                    <span class="ah-words-wrapper" style="color: white;">
+            <b class="is-visible">Developer..</b>
+            <b>Designer..</b>
+            <b>Coder..</b>
+          </span>
+                </h1>
+                <p style="color:white; font-size:20px; line-height:30px;">Hello! My name is Sayak Samnta, and I am a student pursuing a degree in Computer Science and Information Technology (CSIT) at IEM Kolkata. I have a strong passion for machine learning and web development, and I am constantly exploring new technologies and techniques in these fields. As an enthusiastic learner, I enjoy working on projects that challenge my skills and allow me to innovate. I am excited about the future of technology and eager to contribute to impactful solutions.<br>
+                    My skills encompass various technologies, including HTML, CSS, JavaScript, and popular frameworks. I am passionate about crafting visually appealing and functional web applications, and I enjoy staying updated with the latest trends in web design to enhance user experience.</p>
+            </div>
+            <div class="soc-box">
+                <div class="social">
+                    <h4 style="color: gray;">FIND WITH ME</h4><br>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="w-r-sec">
+            <div class="pic">
+                <div class="inner-pic">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section style="margin-top:-700px; margin-left:900px;">
+    <div>
+        <img src="https://edumithra.com/wp-content/uploads/2023/07/Space-Edu-Mithra-NASA-VISIT-ASTRONAUT.png">
+    </div>
+</section>
+
+                      
+     
+
+<section style="margin-top:330px;">
+    <div class="main-container">
+        <div class="image-card">
+          <div class="overlay-quote">
+            <p>
+                "Talk is cheap. Show me the code."
+                <br>
+              <span>Linus Torvalds</span>
+            </p>
+          </div>
+        </div>
+        <div class="image-card">
+          <div class="overlay-quote">
+            <p>
+                "The most important single aspect of software development is to be clear about what you are trying to build."<br>
+              <span>Bjarne Stroustrup</span>
+            </p>
+          </div>
+        </div>
+        <div class="image-card">
+          <div class="overlay-quote">
+            <p>
+                “Artificial intelligence is growing up fast, as are robots whose facial expressions can elicit empathy and make your mirror neurons quiver.” <br>
+              <span>Diane Ackerman.</span>
+            </p>
+          </div>
+        </div>
+        <div class="image-card">
+          <div class="overlay-quote">
+            <p>
+                "Rocket science is tough, and rockets have a way of failing."<br>
+              <span>Sally Ride</span>
+            </p>
+          </div>
+        </div>
+        <div class="image-card">
+          <div class="overlay-quote">
+            <p>
+                "Engineering is not only study of 45 subjects but it is moral studies of intellectual life." <br>
+              <span>Prakhar Srivastav</span>
+            </p>
+          </div>
+        </div>
+        <div class="image-card">
+          <div class="overlay-quote">
+            <p>
+                Here’s a quote about hackers:
+
+                "Hackers are breaking the systems for profit. Before, it was about intellectual curiosity and pursuit of knowledge and thrill, and now hacking is big business." .<br>
+              <span>Kevin Mitnick</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+</section>
+
+
+
+<section id="skill-section" class="scroll-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2 style="font-size: 5.6rem; font-weight: 600; background: linear-gradient(70deg, #fc466b, #fc466b 70%, #f4b400 107%, #fc466b 100%); background-clip: text; color: transparent; -webkit-background-clip: text; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);">
+                WHAT AM I DOING ?
+              </h2><br><br>
+            <p>passionate about artificial intelligence, machine learning, and emerging technologies. With a solid foundation in Python, I specialize in utilizing its versatile frameworks like TensorFlow, PyTorch, and Scikit-Learn to develop innovative machine learning and deep learning solutions.  I actively participate in hackathons and enjoy working on review articles to explore the latest advancements in AI. I am constantly building my portfolio with challenging projects and certifications, including a Python Certificate of Excellence from Scaler</p>
+        </div>
+        <div class="about-image">
+            <div class="video-container">
+                <video id="myVideo" width="100%" autoplay muted loop>
+                  <source src="https://videos.pexels.com/video-files/3129977/3129977-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+             </div>
+               </div>
+    </div>
+</section>
+
+
+<article id="new-section" class="new-section" style="margin-top:-50px; margin-left:50px; padding-right:50px;">
+    <div class="new-section-container">
+        <div class="new-section-image">
+            <div class="video-container">
+                <video id="myVideo" width="100%" autoplay muted loop>
+                  <source src="https://cdn.pixabay.com/video/2023/12/10/192779-893446888_large.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="new-section-text" style="margin-top:-200px; text-align:right;">
+            <h2 style="font-size: 5.6rem; font-weight: 600; background: linear-gradient(70deg, #fc466b, #fc466b 70%, #f4b400 107%, #fc466b 100%); background-clip: text; color: transparent; -webkit-background-clip: text; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);">
+                CORE SKILLS
+              </h2><br><br>
+            <p>My technical expertise spans Python, R, and C++, along with proficiency in version control systems like Git. Leveraging frameworks,  as TensorFlow, PyTorch, and Scikit-Learn, I design innovative machine learning and deep learning solutions. With a strong command of programming and a solid grasp of mathematical foundations, I contribute actively to hackathons, develop review articles, and explore cutting-edge AI advancements.</p>
+        </div>
+    </div>
+</article>
+
+
+<section style="margin-top:160px;">
+<div class="round-image" style="margin-left:890px; margin-top:-290px;">
+    <img src="https://th.bing.com/th/id/OIP.nUYOwBlsmc2xTLmGRzBTCQHaHa?rs=1&pid=ImgDetMain" alt="Icon">
+</div>
+
+</section>
+<section>
+    <div class="round-image" style="margin-left:960px; margin-top:-50px;">
+        <img src="https://www.freeiconspng.com/uploads/c--logo-icon-0.png" alt="Icon">
+    </div>
+    
+    </section>
+
+    <section>
+        <div class="round-image" style="margin-left:1030px; margin-top:-50px;">
+            <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/r-programming-1523093-1290112.png" alt="Icon">
+        </div>
+        
+        </section>
+
+
+        <section>
+            <div class="round-image" style="margin-left:1100px; margin-top:-50px;">
+                <img src="https://pluspng.com/img-png/github-logo-png-github-logos-and-usage-github-800x665.png" alt="Icon">
+            </div>
+            
+            </section>
+ <section>
+                <div class="round-image" style="margin-left:1170px; margin-top:-50px;">
+                    <img src="https://static-00.iconduck.com/assets.00/docker-icon-1024x1024-mv7uzno8.png" alt="Icon">
+                </div>
+                
+                </section>
+  <section>
+                    <div class="round-image" style="margin-left:1240px; margin-top:-50px;">
+                        <img src="https://pluspng.com/img-png/github-logo-png-github-logos-and-usage-github-800x665.png" alt="Icon">
+                    </div>
+                    
+                    </section>
+
+                    
+
+
+    <section style="padding-left:830px; padding-right:60px; margin-top:280px;">
+        <blockquote class="blockquote blockquote--slashes">
+            <p>I have developed multiple innovative projects during my learning journey. These include a <code>File Management System</code> using Python and a <code>To-Do List Application</code>, showcasing my back-end and front-end skills.</p>
+        </blockquote>
+    
+        <blockquote class="blockquote blockquote--classic">
+            <p>My expertise spans machine learning and deep learning frameworks, including TensorFlow and PyTorch. Leveraging these tools, I have deployed models using cloud platforms like <code>AWS</code> and <code>Kubernetes</code>. This hands-on experience has solidified my technical skill set.</p>
+        </blockquote>
+        
+        <div>
+            <hr class="gradient-line">
+        </div>
+    
+        <blockquote class="blockquote blockquote--slashes">
+            <p>I am proficient in <code>Python</code>, <code>R</code>, and <code>C++</code>, along with version control systems like Git. My passion for AI and ML has led me to participate in hackathons, publish review articles, and complete certifications, including a Python Certificate of Excellence from Scaler.</p>
+        </blockquote>
+    
+        <blockquote class="blockquote blockquote--classic">
+            <p>Currently, I am enhancing my knowledge in deep learning, building robust AI systems, and exploring emerging technologies. My projects and experiences reflect my commitment to mastering these domains.</p>
+        </blockquote>
+    </section>
+    
+    
+
+
+
+
+
+
+<section class="section2" style="margin-top:-600px; margin-left:-580px;">
+    <div class="editor-container">
+        <div class="editor-header">
+          <div>
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <h3 class="editor-header-title">TEXT EDITOR</h3>
+        </div>
+        <div class="editor-wrapper">
+          <div class="line-numbers" id="lineNumbers"></div>
+          <textarea class="editor-textarea" id="editorTextarea" placeholder="Start typing your code...">
+def factorial(n):
+    # Base case: factorial of 0 or 1 is 1
+    if n == 0 or n == 1:
+        return 1
+    # Recursive call
+    else:
+        return n * factorial(n-1)
+
+# Input from the user
+number = int(input("Enter a number to find its factorial: "))
+
+# Check for non-negative numbers
+if number < 0:
+    print("Factorial is not defined for negative numbers")
+else:
+    # Calculate and print factorial
+    result = factorial(number)
+    print(f"The factorial of {number} is {result}")
+
+          </textarea>
+        </div>
+      </div>
+</section>
+
+
+
+    
+  <script>
+    const editorTextarea = document.getElementById('editorTextarea');
+    const lineNumbers = document.getElementById('lineNumbers');
+
+    // Function to update line numbers
+    function updateLineNumbers() {
+      const lines = editorTextarea.value.split('\n').length;
+      let lineNumberText = '';
+      
+      for (let i = 1; i <= lines; i++) {
+        lineNumberText += i + '\n';
+      }
+      lineNumbers.textContent = lineNumberText;
+    }
+
+    // Call update function on keyup and input
+    editorTextarea.addEventListener('input', updateLineNumbers);
+    
+    // Initial call to ensure numbers are there when the page loads
+    updateLineNumbers();
+  </script>
+
+
+
+  </section>
+
+
+  <section style="
+  margin-top: 160px; 
+  padding:50px, 20px; 
+  background-image:url(https://i.postimg.cc/L8jxLZ7S/man-1253004-1920-1-1-1.jpg);
+  
+  border-radius: 10px; 
+
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.6);
+  max-width: 1910px;
+  height:750px;
+">
+<!-- Section Title -->
+<h1 style="padding:200px; margin-left:-60px; text-align:left; font-size:80px;
+ background: linear-gradient(40deg, #0d0273, #ff7f00, #0111ef, #00ff7f, #00ffff, #007fff, #0000ff); 
+      
+      -webkit-background-clip: text; 
+      background-clip: text; 
+      -webkit-text-fill-color: transparent;
+      text-shadow: none; ">
+    THOUGHTS
+</h1>
+  <!-- Stylish Paragraph Summary -->
+  <p style="
+  font-size: 2.8rem; 
+  font-family: 'Roboto', sans-serif; /* Clean and versatile font */
+  line-height: 1.5; 
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 900px; 
+  margin-left: 140px;
+  margin-top: -180px;
+  text-align: left;
+  padding-right: 200px;
+">
+
+"Technology is not just a tool; it is a reflection of our boundless creativity, our deepest aspirations, and our relentless pursuit of solutions to humanity's greatest challenges. It reshapes how we connect, how we learn, and how we dream of a future where the impossible becomes reality."<br><br>-<i>Anonymous"</i>
+</p>
+
+
+</section>
+
+
+
+<section style="margin-top:-730px; margin-left:-1280px;">
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;  margin: 0;">
+    <div class="vertical-line" style="width: 5px; height: 440px; background-color: white;"></div>
+</div>
+
+
+</section>
+
+
+
+
+    <section class="section-text-design" style=" margin-top:200px;">
+        <p style="color:white; text-align:center; margin-top:80px; font-size:20px;">
+     - Spice up your type with CSS -</p>
+      <p style="text-align:center; 
+      font-size: 100px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      background: linear-gradient(40deg, #ff007f, #ff7f00, #7fff00, #00ff7f, #00ffff, #007fff, #0000ff); 
+      background-size: 400% 400%; 
+      -webkit-background-clip: text; 
+      background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      animation: gradient-animation 5s ease infinite; 
+      text-shadow: none;"> 
+Animated text fill
+</p>
+    
+    </section>
+
+
+
+
+
+<section style="background-color:none; margin-top:100px;">
+
+    <div class="main-container" >
+       
+        
+        
+        <div class="custom-cards" style="margin-left:-20px;">
+          <div class="custom-card custom-card-1">
+            <div class="icon-circle">
+                <img src="https://cdn1.iconfinder.com/data/icons/facely-metapeople-3d-avatar-set/512/17._Designer.png" alt="Icon" />
+              </div>
+           
+            <h2 class="custom-card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing  amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur  amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing  amet, conse.</h2>
+            <p class="custom-card__apply">
+              <a class="custom-card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="custom-card custom-card-2">
+            <div class="icon-circle">
+                <img src="https://static.vecteezy.com/system/resources/previews/027/951/129/large_2x/business-woman-3d-avatar-character-illustrations-png.png" alt="Icon" />
+              </div>
+           
+            <h2 class="custom-card__title">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+            <p class="custom-card__apply">
+              <a class="custom-card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="custom-card custom-card-3">
+            <div class="icon-circle">
+                <img src="" alt="Icon" />
+              </div>
+            
+            <h2 class="custom-card__title">Ut enim ad minim veniam.</h2>
+            <p class="custom-card__apply">
+              <a class="custom-card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="custom-card custom-card-4">
+            <div class="icon-circle">
+                <img src="https://cdn1.iconfinder.com/data/icons/facely-metapeople-3d-avatar-set/512/5._College_Student.png" alt="Icon" />
+              </div>
+            
+            <h2 class="custom-card__title">Quis nostrud exercitation ullamco laboris nisi.</h2>
+            <p class="custom-card__apply">
+              <a class="custom-card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="custom-card custom-card-5">
+            <div class="icon-circle">
+                <img src="https://cdn1.iconfinder.com/data/icons/facely-metapeople-3d-avatar-set/512/4._Western_Man.png" alt="Icon" />
+              </div>
+            
+            <h2 class="custom-card__title">Ut aliquip ex ea commodo consequat. Duis aute irure dolor.</h2>
+            <p class="custom-card__apply">
+              <a class="custom-card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+          <div class="custom-card custom-card-1">
+            <div class="icon-circle">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/boy-avatar-6299533-5187865.png" alt="Icon" />
+              </div>
+           
+            <h2 class="custom-card__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <p class="custom-card__apply">
+              <a class="custom-card__link" href="#">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+
+
+<section>
+
+
+
+
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</section>
+
+<section id="home" class="scroll-section" style="margin-left:100px; margin-top:230px;">
+
+    <main class="page-main">
+        <div class="card-container">
+            <article class="card" data-bkg="https://i.pinimg.com/736x/94/a7/27/94a727a007541338a458bf0d28580159.jpg">
+                <div class="card-details">
+                    <h1>Embeded Engineering</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+            </article>
+            <a href="#myproj" class="read-more-button">Read more</a>
+        </div>
+        <div class="card-container">
+            <article class="card" data-bkg="https://i.pinimg.com/736x/da/40/4b/da404bf7bd4398c9f256c65507d3c860.jpg" data-primarycolor="#145258">
+                <div class="card-details">
+                    <h1>Web Development</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    </p>
+                </div>
+            </article>
+            <a href="#myproj" class="read-more-button">Read more</a>
+        </div>
+
+
+        <div class="card-container">
+            <article class="card" data-bkg="https://i.pinimg.com/736x/b6/37/80/b6378008ce3e76347e7309d15d0115cc.jpg " data-primarycolor="#145258">
+                <div class="card-details">
+                    <h1>New Research in ML Field</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    </p>
+                </div>
+            </article>
+            <a href="https://news.mit.edu/topic/machine-learning" class="read-more-button">Read more</a>
+        </div>
+    </main>
+
+</section>
+
+<section style="margin-top:-420px; margin-left:1140px;">
+
+    <main class="page-main">
+    <div class="card-container">
+        <article class="card" data-bkg="https://i.pinimg.com/736x/a4/72/26/a472269de8c438b8b2d89ea0edfc03e3.jpg" data-primarycolor="#145258">
+            <div class="card-details">
+                <h1>Meb 3 Block chain</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                </p>
+            </div>
+        </article>
+        <a href="#myproj" class="read-more-button">Read more</a>
+    </div>
+</main>
+</section>
+
+
+
+<section id="contact-container" class="contact-container" style="margin-top:280px;">
+    <div class="info-section">
+        <h2 class="custom1-h2">Get in Touch</h2>
+        <p>If you have any inquiries or would like to collaborate, feel free to reach out!</p>
+        <p>I'm always open to discussing new projects or opportunities. Let’s connect!</p>
+    </div>
+    <section id="contact" class="contact-section scroll-fade">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to reach out by filling out the form below!</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+</section>
+
+
+<script>
+    document.addEventListener('scroll', function() {
+        document.querySelectorAll('.scroll-section').forEach(section => {
+            const sectionPos = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (sectionPos < windowHeight - 50) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+
+
+<script>
+    // Get elements
+    const sidebar = document.getElementById("mySidebar");
+    const openBtn = document.getElementById("openSidebar");
+    const closeBtn = document.getElementById("closeSidebar");
+
+    // Open the sidebar
+    openBtn.addEventListener("click", function () {
+        sidebar.style.width = "250px";
+    });
+
+    // Close the sidebar when close button is clicked
+    closeBtn.addEventListener("click", function () {
+        sidebar.style.width = "0";
+    });
+
+    // Close the sidebar when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && event.target !== openBtn) {
+            sidebar.style.width = "0";
+        }
+    });
+
+    // Prevent event bubbling for clicks inside the sidebar
+    sidebar.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+</script>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("open");
+    }
+</script>
+<script>
+    document.addEventListener('scroll', function() {
+        document.querySelectorAll('.scroll-section').forEach(section => {
+            const sectionPos = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (sectionPos < windowHeight - 50) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+<script>
+    // JavaScript to add 'show' class when the section is in view
+    document.addEventListener("scroll", function () {
+        const sections = document.querySelectorAll(".scroll-fade");
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add("show");
+            }
+        });
+    });
+
+</script>
+<!-- Include jQuery library -->
+<
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.querySelector('.main-content');
+        sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+        mainContent.classList.toggle('sidebar-open');
+    }
+</script>
+<script>
+    /* JavaScript to add the scroll-active class */
+    window.addEventListener("scroll", function() {
+        const sections = document.querySelectorAll(".scroll-section");
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add("scroll-active");
+            }
+        });
+    });
+</script>
+<script>
+    /* JavaScript for triggering scroll effect */
+    window.addEventListener("scroll", function() {
+        const cards = document.querySelectorAll(".card");
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < window.innerHeight - 100) {
+                card.classList.add("scroll-active");
+            }
+        });
+    });
+</script>
+<script>
+
+
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slider .slide");
+
+function updateSliderPosition() {
+const slider = document.querySelector(".slider");
+slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+currentIndex = (currentIndex + 1) % slides.length;
+updateSliderPosition();
+}
+
+function prevSlide() {
+currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+updateSliderPosition();
+}
+
+// Auto-slide every 4 seconds
+setInterval(nextSlide, 7000);
+</script>
+<script src="image%20slider.js"></script>
+<script src="say.js"></script>
+<script src="index.js"></script>
+<script src="image_cards.js"></script>
+</body>
+</html>

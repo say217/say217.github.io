@@ -1,0 +1,1649 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sayak samanta</title>
+    <link rel="icon" href="https://yt3.ggpht.com/a-/AAuE7mCJGyQm_JWllGkYhnlyLf8fmB7D0ePWC1BrZg=s900-mo-c-c0xffffffff-rj-k-no" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="portfolio.css" rel="stylesheet">
+    <link href="submit%20button.css" rel="stylesheet">
+    <link href="image%20slider.css" rel="stylesheet">
+    <link href="project text cards.css" rel="stylesheet">
+    <link href="projects landing page.css" rel="stylesheet">
+    <link href="aboutme.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i.postimg.cc/9fqYVvxh/logo.png" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000, #000a1f);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.5s ease;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+
+        /* Header with background image */
+        header {
+
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Navbar Styling */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            
+        }
+
+        .logo {
+            font-size: 24px;
+            background: -webkit-linear-gradient(120deg, #ff5252, #47b2e4); /* Gradient from red to blue */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            margin-left:200px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            margin:  30px;
+            position: relative;
+        }
+
+        /* Stylish hover effect for nav items */
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 10px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #ff5252;
+            bottom: 0;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+
+        .main-content {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            padding: 10px 20px;
+            background-color: #ff5252;
+            border: none;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: white;
+            color: #ff5252;
+            transform: scale(1.1);
+        }
+
+        
+        .profile-container {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 6px solid #ff5252;
+            overflow: hidden;
+            animation: profileAnim 1s ease-in-out forwards;
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @keyframes profileAnim {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        @keyframes slideUpFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 7rem;
+            margin-top: 270px;
+            transition: color 0.3s ease;
+            opacity: 0;
+            animation: slideUpFadeIn 1.5s ease-out forwards;
+        }
+
+        .hero p {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .hero h1:hover {
+            color: #FF014F;
+        }
+
+        .scroll-section {
+            width: 95%;
+            margin: 20px auto;
+            padding: 0px;
+            background-color: rgba(255, 255, 255, 0.0);
+            border: 1px solid rgba(255, 255, 255, 0.0);
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .scroll-section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background: linear-gradient(120deg, #0f0f0f, #252525, #3d3d3d);
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ff6363;
+            z-index: 1000;
+            background: none;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.1);
+        }
+
+      
+        .about-container {
+            display: flex;
+            align-items: center;
+            max-width: 1600px;
+            margin: 50px auto;
+            padding: 30px;
+            gap: 20px;
+        }
+        
+        .about-text {
+            flex: 1;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-text h2 {
+            position: relative;
+            font-size: 5rem;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .about-text h2::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #ff5252;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-text h2:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .about-text h2:hover {
+            transform: scale(1.05);
+        }
+        
+        .about-text p {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .about-image {
+            flex: 1;
+            max-width: 720px;
+            max-height: 470px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        }
+       
+
+        .contact-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(25, 25, 25, 0.9), rgba(40, 40, 40, 0.9));
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            margin: 50px auto;
+            margin-left: 60px;
+            margin-right: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-container:hover {
+            transform: scale(1.02);
+        }
+
+        .info-section {
+            max-width: 50%;
+            padding-right: 20px;
+            color: #eee;
+        }
+
+        .info-section h2 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .info-section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .contact-section {
+            max-width: 40%;
+            padding-left: 20px;
+            border-left: 3px solid rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .scroll-fade {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .contact-form:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            background: rgba(255, 255, 255, 0.4);
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .info-section, .contact-section {
+                max-width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .custom-h2 {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #1e90ff, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+ /* CSS for the new section */
+.new-section-container {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 30px;
+    gap: 20px;
+}
+
+.new-section-text {
+    flex: 1;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-section-text h2 {
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.new-section-text h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff5252;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.new-section-text h2:hover::before {
+    transform: scaleX(1);
+}
+
+.new-section-text h2:hover {
+    transform: scale(1.05);
+}
+
+.new-section-text p {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.new-section-image {
+    flex: 1;
+    max-width: 720px;
+    max-height: 470px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.new-section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.new-section-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* css image cards*/
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.nft {
+  user-select: none;
+  max-width: 300px;
+  margin: 5rem auto;
+  border: 1px solid #ffffff22;
+  background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: .5s all;
+}
+
+.nft hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #88888855;
+  margin-top: 0;
+}
+
+.nft ins {
+  text-decoration: none;
+}
+
+.nft .main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem;
+}
+
+.nft .main .tokenImage {
+  border-radius: .5rem;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.nft .main .description {
+  margin: .5rem 0;
+  color: #a89ec9;
+}
+
+.nft .main .tokenInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nft .main .tokenInfo .price {
+  display: flex;
+  align-items: center;
+  color: #ee83e5;
+  font-weight: 700;
+}
+
+.nft .main .tokenInfo .price ins {
+  margin-left: -.3rem;
+  margin-right: .5rem;
+}
+
+.nft .main .tokenInfo .duration {
+  display: flex;
+  align-items: center;
+  color: #a89ec9;
+  margin-right: .2rem;
+}
+
+.nft .main .tokenInfo .duration ins {
+  margin: .5rem;
+  margin-bottom: .4rem;
+}
+
+.nft .main .creator {
+  display: flex;
+  align-items: center;
+  margin-top: .2rem;
+  margin-bottom: -.3rem;
+}
+
+.nft .main .creator ins {
+  color: #a89ec9;
+  text-decoration: none;
+}
+
+.nft .main .creator .wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff22;
+  padding: .3rem;
+  margin: 0;
+  margin-right: .5rem;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 4px #000000aa;
+}
+
+.nft .main .creator .wrapper img {
+  border-radius: 100%;
+  border: 1px solid #ffffff22;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  margin: 0;
+}
+
+.nft::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px #ffffff08;
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: .7s all;
+}
+
+.nft:hover {
+  border: 1px solid #ffffff44;
+  box-shadow: 0 7px 50px 10px #000000aa;
+  transform: scale(1.015);
+  filter: brightness(1.3);
+}
+
+.nft:hover::before {
+  filter: brightness(.5);
+  top: -100%;
+  left: 200%;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+      
+        <nav>
+          
+          <div class="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </ul>
+            
+        </nav>
+       
+           
+        
+      </header>
+      
+      <section style="margin-top: -67px; margin-right:1100px; text-align: center;">
+        <div style="display: inline-block; border: 1px solid white; border-radius: 50%; padding: 5px;">
+            <img src="https://cdn2.iconfinder.com/data/icons/man-3d-character-package/512/man_character_15.png" alt="icon" style="border-radius: 50%; width: 50px;" />
+        </div>
+    </section>
+    
+      
+      <section class="hero-section">
+        <div class="hero" style="margin-top:-160px; margin-left:-530px;">
+            <div > <h1 style="position: relative; font-family: 'Roboto', sans-serif; font-size: 7rem;    background: linear-gradient(90deg, #00c6ff, #0072ff); -webkit-background-clip: text; color: transparent; text-align: left; display: inline-block; margin-bottom: 10px;">
+                ABOUT ME </h1>
+          <p>
+            Join us in the exciting world of programming and turn your ideas into
+            reality. Unlock the world of endless possibilities - learn to code and
+            shape the digital future with us.
+          </p>
+          <div class="buttons">
+            <a href="#" class="join">Join Now</a>
+            <a href="#" class="learn">Learn More</a>
+          </div>
+        </div>
+        <div class="img" style="margin-top:-500px; margin-left:800px; width:300px;">
+            <img src="https://static.vecteezy.com/system/resources/previews/023/338/149/non_2x/ai-generative-cartoon-man-hacker-free-illustration-free-png.png" alt="hero image"  />
+          </div>
+      </section>
+  
+
+
+<!-- Sections -->
+
+
+
+<section id="skill-section" class="scroll-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2 style="font-size: 5.6rem; font-weight: 600; background: linear-gradient(70deg, #fc466b, #fc466b 70%, #f4b400 107%, #fc466b 100%); background-clip: text; color: transparent; -webkit-background-clip: text; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);">
+                SECTION
+              </h2><br><br>
+            <p>Description of my project, detailing the project scope,  Our latest project focuses on developing a sustainable urban garden system that utilizes innovative hydroponic techniques. By integrating technology with nature, we aim to create a self-sufficient ecosystem that can thrive in urban environments. This project not only addresses food security but also promotes environmental awareness and community engagement objectives, and technology used.</p>
+        </div>
+        <div class="about-image">
+            <img src="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2018/11/dark-wallpapers.jpg" alt="Project Image">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section style="margin-left:-970px;">
+<main>
+    <aside class="sidebar " data-sidebar>
+        <div class="sidebar-info">
+            <figure class="avatar-box">
+                <img src="C:\Users\sayak\Downloads\vecteezy_creative-3d-joker-boy-great-for-art-or-creativity-inspired_22484281.png" alt="avatar" width="80">
+            </figure>
+
+            <div class="info-content">
+                <h1 class="name" title="Richard Hanrick">Sayak Samanta</h1>
+                <p class="title">Computer science Student</p>
+            </div>
+
+            <button class="info-more-btn" data-sidebar-btn>
+                <span>Show Contacts</span>
+                <ion-icon name="chevron-down"></ion-icon>
+            </button>
+        </div>
+
+        <div class="sidebar-info-more">
+            <div class="separator"></div>
+
+            <ul class="contacts-list">
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Email</p>
+
+                        <a href="mailto:richard@example.com" class="contact-link">richardexample.com</a>
+                    </div>
+                </li>
+
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="phone-portrait-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Phone</p>
+
+                        <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+                    </div>
+                </li>
+
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Birthday</p>
+
+                        <time datetime="1982-06-23">June 23, 1982</time>
+                    </div>
+                </li>
+
+                <li class="contact-item">
+                    <div class="icon-box">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+
+                    <div class="contact-info">
+                        <p class="contact-title">Location</p>
+
+                        <address>Sacramento, California, USA</address>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="separator"></div>
+
+            <ul class="social-list">
+            
+                    <div class="social-item">
+                        <a href="https://www.linkedin.com" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.github.com" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.twitter.com" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="social-item">
+                        <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+               
+                
+            </ul>
+        </div>
+    </aside>
+
+</main>
+</section>
+
+<section style="padding-left:600px; padding-right:100px;  margin-top:-870px;">
+
+<blockquote class="blockquote blockquote--slashes">
+    <p>Address lookup tables can be created with either a <code>v0</code> transaction or a <code>legacy</code> transaction. But the Solana runtime can only retrieve and handle the additional addresses within a lookup table while ysing a <a href="">v0 Versioned Transactions</a></p>
+  </blockquote>
+  
+  <blockquote class="blockquote blockquote--classic">
+    <p>Address lookup tables can be created with either a <code>v0</code> transaction or a <code>legacy</code> transaction. But the Solana runtime can only retrieve and handle the additional addresses within a lookup table while ysing a <a href="">v0 Versioned Transactions</a></p>
+  </blockquote>
+  <div>
+  <hr class="gradient-line">
+</section>
+
+
+<section style="padding-left:600px; padding-right:100px;  margin-top:110px;">
+
+    <blockquote class="blockquote blockquote--slashes">
+        <p>Address lookup tables can be created with either a <code>v0</code> transaction or a <code>legacy</code> transaction. But the Solana runtime can only retrieve and handle the additional addresses within a lookup table while ysing a <a href="">v0 Versioned Transactions</a></p>
+      </blockquote>
+      
+      <blockquote class="blockquote blockquote--classic">
+        <p>Address lookup tables can be created with either a <code>v0</code> transaction or a <code>legacy</code> transaction. But the Solana runtime can only retrieve and handle the additional addresses within a lookup table while ysing a <a href="">v0 Versioned Transactions</a></p>
+      </blockquote>
+      <div>
+      <hr class="gradient-line">
+    </section>
+
+
+
+
+<section style="margin-top:600px;">
+    <div class="main-content">
+   
+
+        
+
+
+    
+                <main>
+
+            <section class="testimonials" style="margin-left:400px; margin-top:-600px;">
+                <h3 class="h3 testimonials-title"  style="text-align:left;">Testimonials</h3>
+
+                <ul class="testimonials-list has-scrollbar">
+                    <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                            <figure class="testimonials-avatar-box">
+                                <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="avatar" data-testimonials-avatar width="60">
+                            </figure>
+
+                            <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel Lewis</h4>
+
+                            <div class="testimonials-text" data-testimonials-text>
+                                <p>Richard was hired to create a corporate identity. It's modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                            <figure class="testimonials-avatar-box">
+                                <img src="https://i.postimg.cc/DwY0yHtx/avatar-2.png" alt="avatar" data-testimonials-avatar width="60">
+                            </figure>
+
+                            <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica Miller</h4>
+
+                            <div class="testimonials-text" data-testimonials-text>
+                                <p>Working with Richard has been an absolute pleasure. I was impressed with his attention to detail, his web design skills and his professional approach to our timelines and processes.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                            <figure class="testimonials-avatar-box">
+                                <img src="https://i.postimg.cc/fRFWhX9F/avatar-3.png" alt="avatar" data-testimonials-avatar width="60">
+                            </figure>
+
+                            <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily Evans</h4>
+
+                            <div class="testimonials-text" data-testimonials-text>
+                                <p>I couldn't be happier with the website that Richard created for us. His attention to detail and creativity is unmatched. Our clients frequently compliment the design, and it has significantly improved our brand image.</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="testimonials-item">
+                        <div class="content-card" data-testimonials-item>
+                            <figure class="testimonials-avatar-box">
+                                <img src="https://i.postimg.cc/zXv1Xv81/avatar-4.png" alt="avatar" data-testimonials-avatar width="60">
+                            </figure>
+
+                            <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry Williams</h4>
+
+                            <div class="testimonials-text" data-testimonials-text>
+                                <p>I was overwhelmed with the thought of redesigning my online store, but Richard made the process seamless. The site is not only visually appealing but also optimized for conversions. I've seen a 50% increase in traffic since the launch!</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        </section>
+            <div class="modal-container " data-modal-container>
+                <div class="overlay " data-overlay></div>
+
+                <section class="testimonials-modal">
+                    <button class="modal-close-btn" data-modal-close-btn><ion-icon name="close-outline"></ion-icon></button>
+
+                    <div class="modal-img-wrapper">
+                        <figure class="modal-avatar-box">
+                            <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="Daniel Lewis" width="80" data-modal-img>
+                        </figure>
+
+                        <img src="https://i.postimg.cc/mZ00RwX7/icon-quote.png" alt="quote icon">
+                    </div>
+
+                    <div class="modal-content">
+                        <h4 class="h3 modal-title" data-modal-title>Daniel Lewis</h4>
+                        <time datetime="2023-06-14">14 June, 2023</time>
+
+                        <div class="modal-text" data-modal-text>
+                            <p>Richard was hired to create a corporate identity. It's modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+</main>
+</section>
+
+
+
+</section>
+
+<section id="skill-section" class="scroll-section" style="margin-top:-300px;">
+    <div class="about-container">
+        <div class="about-text">
+            <h2 style="font-size: 5.6rem; font-weight: 600; background: linear-gradient(70deg, #fc466b, #fc466b 70%, #f4b400 107%, #fc466b 100%); background-clip: text; color: transparent; -webkit-background-clip: text; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);">
+                SECTION
+              </h2><br><br>
+            <p>Description of my project, detailing the project scope,  Our latest project focuses on developing a sustainable urban garden system that utilizes innovative hydroponic techniques. By integrating technology with nature, we aim to create a self-sufficient ecosystem that can thrive in urban environments. This project not only addresses food security but also promotes environmental awareness and community engagement objectives, and technology used.</p>
+        </div>
+        <div class="about-image">
+            <div class="video-container">
+              <video id="myVideo" width="100%" autoplay muted loop>
+                <source src="https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          
+    
+</section>
+
+
+
+<section class="section-text-design" style=" margin-top:200px;">
+    <p style="color:white; text-align:center; margin-top:80px; font-size:20px;">
+ - Spice up your type with CSS -</p>
+  <p style="text-align:center; 
+  font-size: 100px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  background: linear-gradient(40deg, #ff007f, #ff7f00, #7fff00, #00ff7f, #00ffff, #007fff, #0000ff); 
+  background-size: 400% 400%; 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: gradient-animation 5s ease infinite; 
+  text-shadow: none;"> 
+MY journey
+</p>
+<section style="margin-top:100px;">
+    <main>
+      
+            <section class="skill" >
+                <h3 class="h3 skills-title">My Skills</h3>
+
+                <ul class="skills-list content-card">
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Web Design</h5>
+                            <data value="80">80%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Graphic Design</h5>
+                            <data value="70">70%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Branding</h5>
+                            <data value="90">90%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">WordPress</h5>
+                            <data value="50">50%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 50%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="timeline">
+                <div class="title-wrapper">
+                    
+
+                    <h3 class="h3">Education</h3>
+                </div>
+
+                <ol class="timeline-list">
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">University school of the arts</h4>
+                        <span style="color:#00bfff">2008 - 2010</span>
+                        <p class="timeline-text">There I learnt a wide range of topics that are essential to understanding both the theory and practical aspects of computing. This involves programming fundamentals, computer architecture, operating systems, databases, software engineering, problem solving, collaboration and communication soft skills.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">New York Academy of Art</h4>
+                        <span style="color:#00bfff">2006 - 2007</span>
+                        <p class="timeline-text">I chose my master degree in technology. There I deepened my knowledge, enhanced my skills in the area and learnt how to increase my career prospects in a competitive job market.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">High School of Art and Design</h4>
+                        <span style="color:#00bfff">2003 - 2005</span>
+                        <p class="timeline-text">There I learnt foundational courses and computer sciences fundamentals. In the institution, I chose my specialization in web-development that involves front-end and back-end technologies, user interface designs and content management systems.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="timeline">
+                <div class="title-wrapper">
+                    <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+
+                    <h3 class="h3">Experience</h3>
+                </div>
+
+                <ol class="timeline-list">
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Creative director</h4>
+                        <span style="color:#00bfff">2015 - Present</span>
+                        <p class="timeline-text">I can develop and oversee creative concepts for projects and campaigns managing a team of designers, writers, and other creative professionals.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Art director</h4>
+                        <span style="color:#00bfff">2013 - 2015</span>
+                        <p class="timeline-text">I create and develop visual concepts that align with the project's goals and objectives, supervising the design process and managing timelines and budgets for design projects.</p>
+                    </li>
+
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">Web designer</h4>
+                        <span style="color:#00bfff">2010 - 2013</span>
+                        <p class="timeline-text">I create logos, color schemes and typography for a brand's identity. Also I develop graphics for websites, social media and digital ads with applications that enhance user experience.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="skill">
+                <h3 class="h3 skills-title">My Skills</h3>
+
+                <ul class="skills-list content-card">
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Web Design</h5>
+                            <data value="80">80%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Graphic Design</h5>
+                            <data value="70">70%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">Branding</h5>
+                            <data value="90">90%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </li>
+
+                    <li class="skills-item">
+                        <div class="title-wrapper">
+                            <h5 class="h5">WordPress</h5>
+                            <data value="50">50%</data>
+                        </div>
+
+                        <div class="skills-progress-bg">
+                            <div class="skills-progress-fill" style="width: 50%;"></div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        </section>
+
+
+
+
+
+
+
+
+
+<section style="padding-left:40px; padding-right:40px;">
+<main>
+           
+
+            <section class="projects">
+            
+                <div class="filter-select-box">
+                    <button class="filter-select " data-select>
+                        <div class="select-value" data-select-value>Select Category</div>
+
+                        <div class="select-icon">
+                            <ion-icon name="chevron-down"></ion-icon>
+                        </div>
+                    </button>
+
+                    <ul class="select-list">
+                        <li class="select-item"><button data-select-item>All</button></li>
+                        <li class="select-item"><button data-select-item>Web Design</button></li>
+                        <li class="select-item"><button data-select-item>Applications</button></li>
+                        <li class="select-item"><button data-select-item>Web Development</button></li>
+                    </ul>
+                </div>
+
+                <ul class="project-list">
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/qRHpHMyd/project-1.jpg" alt="finance" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Finance</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Orizon</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web design">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Fundo</h3>
+                            <p class="project-category">Web Design</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="applications">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/dtpXxNGb/project-4.png" alt="brawlhalla" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Brawlhalla</h3>
+                            <p class="project-category">Applications</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web design">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">DSM.</h3>
+                            <p class="project-category">Web Design</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web design">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/qR1DX1kZ/project-6.png" alt="metaspark" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Metaspark</h3>
+                            <p class="project-category">Web Design</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Summary</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="applications">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/rw2j4B1w/project-8.jpg" alt="task manager" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Task Manager</h3>
+                            <p class="project-category">Applications</p>
+                        </a>
+                    </li>
+
+                    <li class="project-item active" data-filter-item data-category="web development">
+                        <a href="#">
+                            <figure class="project-img">
+                                <div class="project-item-icon-box">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy">
+                            </figure>
+
+                            <h3 class="project-title">Arrival</h3>
+                            <p class="project-category">Web Development</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        
+        </main>
+    </section>
+
+
+
+    <section class="section-text-design" style=" margin-top:200px;">
+        <p style="color:white; text-align:center; margin-top:80px; font-size:20px;">
+     - Spice up your type with CSS -</p>
+      <p style="text-align:center; 
+      font-size: 60px; 
+      font-weight: 700; 
+      text-transform: uppercase; 
+      background: linear-gradient(40deg, #ff007f, #ff7f00, #7fff00, #00ff7f, #00ffff, #007fff, #0000ff); 
+      background-size: 400% 400%; 
+      -webkit-background-clip: text; 
+      background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      animation: gradient-animation 5s ease infinite; 
+      text-shadow: none;"> 
+    Contact me
+    </p>
+</section>
+
+
+
+
+        <section style="padding-right:800px; margin-left:80px;">
+<main>
+            <section class="mapbox" data-mapbox>
+                <figure>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                     width="400" height="300" loading="lazy"></iframe>
+                </figure>
+            </section>
+        </article>
+        
+
+    </div>
+</main>
+</section>
+<section style="margin-left:800px; width:670px; margin-top:-460px; border-radius:3%;">
+    <div class="video-container" style="overflow: hidden; border-radius: 5%;">
+        <video id="myVideo" width="100%" autoplay muted loop style="border-radius: 5%;">
+            <source src="https://cdn.pixabay.com/video/2023/09/16/180875-865216875_large.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+
+<script src="main.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</section>
+
+
+
+<section id="contact-container" class="contact-container" style="margin-top:200px;">
+    <div class="info-section">
+        <h2 class="custom1-h2">Get in Touch</h2>
+        <p>If you have any inquiries or would like to collaborate, feel free to reach out!</p>
+        <p>I'm always open to discussing new projects or opportunities. Let’s connect!</p>
+    </div>
+    <section id="contact" class="contact-section scroll-fade">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to reach out by filling out the form below!</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit </button>
+        </form>
+    </section>
+</section>
+
+
+<script>
+    document.addEventListener('scroll', function() {
+        document.querySelectorAll('.scroll-section').forEach(section => {
+            const sectionPos = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (sectionPos < windowHeight - 50) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+<script>
+    
+const featureSection = document.querySelector('.feature-section');
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition >= 500) {
+        featureSection.classList.add('active');
+    } else {
+        featureSection.classList.remove('active');
+    }
+});
+</script>
+<script>
+    // Get elements
+    const sidebar = document.getElementById("mySidebar");
+    const openBtn = document.getElementById("openSidebar");
+    const closeBtn = document.getElementById("closeSidebar");
+
+    // Open the sidebar
+    openBtn.addEventListener("click", function () {
+        sidebar.style.width = "250px";
+    });
+
+    // Close the sidebar when close button is clicked
+    closeBtn.addEventListener("click", function () {
+        sidebar.style.width = "0";
+    });
+
+    // Close the sidebar when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && event.target !== openBtn) {
+            sidebar.style.width = "0";
+        }
+    });
+
+    // Prevent event bubbling for clicks inside the sidebar
+    sidebar.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+</script>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("open");
+    }
+</script>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.querySelector('.main-content');
+        sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+        mainContent.classList.toggle('sidebar-open');
+    }
+</script>
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slider .slide");
+
+    function updateSliderPosition() {
+        const slider = document.querySelector(".slider");
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSliderPosition();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSliderPosition();
+    }
+
+    // Auto-slide every 4 seconds
+    setInterval(nextSlide, 7000);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="aboutme.js"></script>
+</body>
+</html>

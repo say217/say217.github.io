@@ -1,0 +1,145 @@
+/* CARDS */
+.custom-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align the cards */
+  }
+  
+  .custom-card {
+    font-family: "Open Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 30px;
+    padding: 15px;
+    width: 400px; /* Reduced size */
+    min-height: 180px;
+    display: grid;
+    grid-template-rows: 20px 40px 1fr 40px;
+    border-radius: 15px; /* Increased border-radius for smoother corners */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease-in-out; /* Smoother scaling */
+  }
+  
+  .custom-card:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.03); /* Increase scale effect slightly */
+  }
+  
+  .custom-card__link,
+  .custom-card__exit,
+  .custom-card__icon {
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.95);
+  }
+  
+  .custom-card__link::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 0.5s;
+  }
+  
+  .custom-card__link:hover::after {
+    width: 100%;
+  }
+  
+  .custom-card__exit {
+    grid-row: 1/2;
+    justify-self: end;
+    font-size: 18px; /* Adjusted size */
+  }
+  
+  .custom-card__icon {
+    grid-row: 2/3;
+    font-size: 25px; /* Slightly smaller icons */
+  }
+  
+  .custom-card__title {
+    grid-row: 3/4;
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .custom-card__apply {
+    grid-row: 4/5;
+    align-self: center;
+    font-size: 16px;
+  }
+  
+  /* CARD BACKGROUNDS WITH DEEP GRADIENTS */
+  .custom-card-1 {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  }
+  
+  .custom-card-2 {
+    background: linear-gradient(135deg, #240b36, #7b4397, #dc2430);
+  }
+  
+  .custom-card-3 {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  }
+  
+  .custom-card-4 {
+    background: linear-gradient(135deg, #134e5e, #71b280);
+  }
+  
+  .custom-card-5 {
+    background: linear-gradient(135deg, #42275a, #734b6d);
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1400px) {
+    .custom-card {
+      width: 350px; /* Adjust width for smaller screens */
+      min-height: 150px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .custom-cards {
+      flex-direction: column; /* Stack cards vertically for mobile view */
+      align-items: center;
+    }
+    
+    .custom-card {
+      width: 100%; /* Full width for mobile screens */
+      margin: 10px;
+    }
+  }
+  /* ROUND IMAGE ICON */
+.icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Circle size */
+    height: 60px;
+    border-radius: 50%; /* Makes it circular */
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    overflow: hidden; /* Ensures the image stays within the circle */
+  }
+  
+  .icon-circle img {
+    width: 100%; /* Image should fit the circle */
+    height: 100%; /* Ensures it covers the circle completely */
+    object-fit: cover; /* Maintains the aspect ratio without distortion */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+  }
+  
+  .icon-circle:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+
+
+
+
+  /* line path*/

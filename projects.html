@@ -1,0 +1,1505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>sayak samanta</title>
+    <link rel="icon" href="https://yt3.ggpht.com/a-/AAuE7mCJGyQm_JWllGkYhnlyLf8fmB7D0ePWC1BrZg=s900-mo-c-c0xffffffff-rj-k-no" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="portfolio.css" rel="stylesheet">
+    <link href="submit%20button.css" rel="stylesheet">
+    <link href="image%20slider.css" rel="stylesheet">
+    <link href="project text cards.css" rel="stylesheet">
+    <link href="projects landing page.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000, #000a1f);
+            color: white;
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.5s ease;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+    
+
+        .main-content {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .contact-btn {
+            padding: 10px 20px;
+            background-color: #ff5252;
+            border: none;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background-color: white;
+            color: #ff5252;
+            transform: scale(1.1);
+        }
+
+        
+        .profile-container {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            border: 6px solid #ff5252;
+            overflow: hidden;
+            animation: profileAnim 1s ease-in-out forwards;
+        }
+
+        .profile-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        @keyframes profileAnim {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        @keyframes slideUpFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 7rem;
+            margin-top: 270px;
+            transition: color 0.3s ease;
+            opacity: 0;
+            animation: slideUpFadeIn 1.5s ease-out forwards;
+        }
+
+        .hero p {
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .hero h1:hover {
+            color: #FF014F;
+        }
+
+        .scroll-section {
+            width: 95%;
+            margin: 20px auto;
+            padding: 0px;
+            background-color: rgba(255, 255, 255, 0.0);
+            border: 1px solid rgba(255, 255, 255, 0.0);
+            border-radius: 8px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .scroll-section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background: linear-gradient(120deg, #0f0f0f, #252525, #3d3d3d);
+            padding: 70px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-col h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background-color: #e91e63;
+            height: 2px;
+            box-sizing: border-box;
+            width: 50px;
+        }
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        @media (max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+
+        .toggle-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ff6363;
+            z-index: 1000;
+            background: none;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.1);
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            overflow-x: hidden;
+            transition: width 0.5s ease, background 0.5s;
+            padding-top: 60px;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .sidebar a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background: linear-gradient(135deg, #ffcf00, #fa4299);
+            transition: width 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: lightblue;
+        }
+
+        .sidebar a:hover::after {
+            width: 100%;
+        }
+
+        .open-btn {
+            font-size: 30px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1100;
+            transition: transform 0.3s ease;
+        }
+
+        .open-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+            cursor: pointer;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .close-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .sidebar-open ~ .main-content {
+            filter: blur(3px);
+            transition: filter 0.5s ease;
+        }
+
+        .sidebar-open {
+            width: 250px;
+        }
+        .about-container {
+            display: flex;
+            align-items: center;
+            max-width: 1600px;
+            margin: 50px auto;
+            padding: 30px;
+            gap: 20px;
+        }
+        
+        .about-text {
+            flex: 1;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-text h2 {
+            position: relative;
+            font-size: 5rem;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .about-text h2::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background-color: #ff5252;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .about-text h2:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .about-text h2:hover {
+            transform: scale(1.05);
+        }
+        
+        .about-text p {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .about-image {
+            flex: 1;
+            max-width: 720px;
+            max-height: 470px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 0px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+        }
+       
+
+        .contact-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(25, 25, 25, 0.9), rgba(40, 40, 40, 0.9));
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            margin: 50px auto;
+            margin-left: 60px;
+            margin-right: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-container:hover {
+            transform: scale(1.02);
+        }
+
+        .info-section {
+            max-width: 50%;
+            padding-right: 20px;
+            color: #eee;
+        }
+
+        .info-section h2 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .info-section p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #ccc;
+        }
+
+        .contact-section {
+            max-width: 40%;
+            padding-left: 20px;
+            border-left: 3px solid rgba(255, 255, 255, 0.3);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .scroll-fade {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .contact-form:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: background 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            background: rgba(255, 255, 255, 0.4);
+            outline: none;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+
+            .info-section, .contact-section {
+                max-width: 100%;
+                padding: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        .custom-h2 {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #1e90ff, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+ /* CSS for the new section */
+.new-section-container {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 30px;
+    gap: 20px;
+}
+
+.new-section-text {
+    flex: 1;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-section-text h2 {
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.new-section-text h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff5252;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.new-section-text h2:hover::before {
+    transform: scaleX(1);
+}
+
+.new-section-text h2:hover {
+    transform: scale(1.05);
+}
+
+.new-section-text p {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.new-section-image {
+    flex: 1;
+    max-width: 720px;
+    max-height: 470px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.new-section-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.new-section-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.new-section-1-container {
+    display: flex;
+    align-items: center;
+    max-width: 1600px;
+    margin-right: 50px auto;
+    padding: 30px;
+    gap: 20px;
+    margin-right: 60px;
+}
+
+.new-section-1-text {
+    flex: 1;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.new-section-1-text h2 {
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.new-section-1-text h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff5252;
+    bottom: -5px;
+    right: 10px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.new-section-1-text h2:hover::before {
+    transform: scaleX(1);
+}
+
+.new-section-1-text h2:hover {
+    transform: scale(1.05);
+}
+
+.new-section-1-text p {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* css image cards*/
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.nft {
+
+    
+  user-select: none;
+  max-width: 300px;
+  margin: 5rem auto;
+  border: 1px solid #ffffff22;
+  background-color: #282c34;
+  background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+  box-shadow: 0 7px 20px 5px #00000088;
+  border-radius: .7rem;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  transition: .5s all;
+}
+
+.nft hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #88888855;
+  margin-top: 0;
+}
+
+.nft ins {
+  text-decoration: none;
+}
+
+.nft .main {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem;
+}
+
+.nft .main .tokenImage {
+  border-radius: .5rem;
+  max-width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.nft .main .description {
+  margin: .5rem 0;
+  color: #a89ec9;
+}
+
+.nft .main .tokenInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nft .main .tokenInfo .price {
+  display: flex;
+  align-items: center;
+  color: #ee83e5;
+  font-weight: 700;
+}
+
+.nft .main .tokenInfo .price ins {
+  margin-left: -.3rem;
+  margin-right: .5rem;
+}
+
+.nft .main .tokenInfo .duration {
+  display: flex;
+  align-items: center;
+  color: #a89ec9;
+  margin-right: .2rem;
+}
+
+.nft .main .tokenInfo .duration ins {
+  margin: .5rem;
+  margin-bottom: .4rem;
+}
+
+.nft .main .creator {
+  display: flex;
+  align-items: center;
+  margin-top: .2rem;
+  margin-bottom: -.3rem;
+}
+
+.nft .main .creator ins {
+  color: #a89ec9;
+  text-decoration: none;
+}
+
+.nft .main .creator .wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff22;
+  padding: .3rem;
+  margin: 0;
+  margin-right: .5rem;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 4px #000000aa;
+}
+
+.nft .main .creator .wrapper img {
+  border-radius: 100%;
+  border: 1px solid #ffffff22;
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  margin: 0;
+}
+
+.nft::before {
+  position: fixed;
+  content: "";
+  box-shadow: 0 0 100px 40px #ffffff08;
+  top: -10%;
+  left: -100%;
+  transform: rotate(-45deg);
+  height: 60rem;
+  transition: .7s all;
+}
+
+.nft:hover {
+  border: 1px solid #ffffff44;
+  box-shadow: 0 7px 50px 10px #000000aa;
+  transform: scale(1.015);
+  filter: brightness(1.3);
+}
+
+.nft:hover::before {
+  filter: brightness(.5);
+  top: -100%;
+  left: 200%;
+}
+   /* Header with background image */
+   header {
+
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Navbar Styling */
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    font-size: 24px;
+    color: #ff5252;
+    margin-left:200px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin:  30px;
+    position: relative;
+}
+
+/* Stylish hover effect for nav items */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ff5252;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.main-content {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+      
+            <nav>
+                <div class="logo">MyPortfolio</div>
+                <ul class="nav-links">
+                  <a href="#home"> Home</a>
+                  <a href="#about">About</a>
+                  <a href="#skills"></i> Skills</a>
+                  <a href="#projects"></i> Projects</a>
+                  <a href="#contact"></i> Contact</a>
+                </ul>
+        
+          
+        </nav>
+      </header>
+      <section class="hero-section">
+        <div class="hero" style="margin-top:-150px;">
+            <h1 style="position: relative; font-family: 'Roboto', sans-serif; font-size: 7rem;    background: linear-gradient(90deg, #00c6ff, #0072ff); -webkit-background-clip: text; color: transparent; text-align: left; display: inline-block; margin-bottom: 10px;">
+                MY PROJECTS </h1>
+          <p>
+            Join us in the exciting world of programming and turn your ideas into
+            reality. Unlock the world of endless possibilities - learn to code and
+            shape the digital future with us.
+          </p>
+          <div class="buttons">
+            <a href="#" class="join">Join Now</a>
+            <a href="#" class="learn">Learn More</a>
+          </div>
+        </div>
+        <div class="img" style="">
+          <img   src="https://pngimg.com/uploads/globe/globe_PNG100087.png" alt="hero image" />
+        </div>
+      </section>
+<!-- Hero Section with Circular Image -->
+
+<button class="toggle-button" onclick="toggleSidebar()">&#9776;</button>
+
+<!-- Sidebar Navigation -->
+
+<!-- Sidebar Trigger Button -->
+<button class="open-btn" onclick="toggleSidebar()">&#9776; </button>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
+    <a href="#home"><i class="fas fa-home"></i> Home</a><br><br>
+
+    <a href="#about"><i class="fas fa-user"></i> About</a><br><br>
+    <a href="#skills"><i class="fas fa-cogs"></i> Skills</a><br><br>
+    <a href="#projects"><i class="fas fa-file-alt"></i> Projects</a><br><br>
+
+    <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+</div>
+
+<!-- Sections -->
+
+
+<article id="new-section" class="new-section" style="margin-top:50px; margin-left:50px;">
+    <div class="new-section-container">
+        <div class="new-section-image">
+    
+                <div class="video-container">
+                  <video id="myVideo" width="100%" autoplay muted loop>
+                    <source src="https://videos.pexels.com/video-files/3129977/3129977-uhd_2560_1440_30fps.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+               </div>
+        </div>
+        <div class="new-section-text">
+            <h2 style="font-size: 5.6rem; font-weight: 600; background: linear-gradient(70deg, #fc466b, #fc466b 70%, #f4b400 107%, #fc466b 100%); background-clip: text; color: transparent; -webkit-background-clip: text; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);">
+                SECTION
+              </h2><br><br>
+            <p>Description of the new section, detailing the scope, objectives, and technology used.</p>
+        </div>
+    </div>
+</article>
+
+
+<section id="project-section" class="scroll-section">
+    <div class="about-container">
+        <div class="about-text">
+            <h2 style="font-size: 5.6rem; font-weight: 600; background: linear-gradient(70deg, #fc466b, #fc466b 70%, #f4b400 107%, #fc466b 100%); background-clip: text; color: transparent; -webkit-background-clip: text; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);">
+                SECTION
+              </h2><br><br>
+            <p>Description of my project, detailing the project scope,  Our latest project focuses on developing a sustainable urban garden system that utilizes innovative hydroponic techniques. By integrating technology with nature, we aim to create a self-sufficient ecosystem that can thrive in urban environments. This project not only addresses food security but also promotes environmental awareness and community engagement objectives, and technology used.</p>
+        </div>
+        <div class="about-image">
+            
+            <div class="video-container">
+                <video id="myVideo" width="100%" autoplay muted loop>
+                  <source src="https://videos.pexels.com/video-files/1851190/1851190-uhd_2560_1440_25fps.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+             </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="project-section" class="scroll-section">
+  
+<div class="grid">
+    <div class="card">
+        <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.5 3.5C14.5 3.5 14.5 5.5 12 5.5C9.5 5.5 9.5 3.5 9.5 3.5H7.5L4.20711 6.79289C3.81658 7.18342 3.81658 7.81658 4.20711 8.20711L6.5 10.5V20.5H17.5V10.5L19.7929 8.20711C20.1834 7.81658 20.1834 7.18342 19.7929 6.79289L16.5 3.5H14.5Z"/>
+            </svg>
+        </span>
+        <h4>Products</h4>
+        <p>Standard chunk of Lorem Ipsum used since the 1500s is showed below for those interested.</p>
+        <div class="shine"></div>
+        <div class="background">
+            <div class="tiles">
+                <div class="tile tile-1"></div>
+                <div class="tile tile-2"></div>
+                <div class="tile tile-3"></div>
+                <div class="tile tile-4"></div>
+                <div class="tile tile-5"></div>
+                <div class="tile tile-6"></div>
+                <div class="tile tile-7"></div>
+                <div class="tile tile-8"></div>
+                <div class="tile tile-9"></div>
+                <div class="tile tile-10"></div>
+            </div>
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+    </div>
+    <div class="card">
+        <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 9.5V5.5C4.5 4.94772 4.94772 4.5 5.5 4.5H9.5C10.0523 4.5 10.5 4.94772 10.5 5.5V9.5C10.5 10.0523 10.0523 10.5 9.5 10.5H5.5C4.94772 10.5 4.5 10.0523 4.5 9.5Z"/>
+                <path d="M13.5 18.5V14.5C13.5 13.9477 13.9477 13.5 14.5 13.5H18.5C19.0523 13.5 19.5 13.9477 19.5 14.5V18.5C19.5 19.0523 19.0523 19.5 18.5 19.5H14.5C13.9477 19.5 13.5 19.0523 13.5 18.5Z"/>
+                <path d="M4.5 19.5L7.5 13.5L10.5 19.5H4.5Z"/>
+                <path d="M16.5 4.5C18.1569 4.5 19.5 5.84315 19.5 7.5C19.5 9.15685 18.1569 10.5 16.5 10.5C14.8431 10.5 13.5 9.15685 13.5 7.5C13.5 5.84315 14.8431 4.5 16.5 4.5Z"/>
+            </svg>
+        </span>
+        <h4>Categories</h4>
+        <p>Standard chunk of Lorem Ipsum used since the 1500s is showed below for those interested.</p>
+        <div class="shine"></div>
+        <div class="background">
+            <div class="tiles">
+                <div class="tile tile-1"></div>
+                <div class="tile tile-2"></div>
+                <div class="tile tile-3"></div>
+                <div class="tile tile-4"></div>
+                <div class="tile tile-5"></div>
+                <div class="tile tile-6"></div>
+                <div class="tile tile-7"></div>
+                <div class="tile tile-8"></div>
+                <div class="tile tile-9"></div>
+                <div class="tile tile-10"></div>
+            </div>
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+        </div>
+       
+    </div>
+
+</div>
+
+<label class="day-night">
+    <input type="checkbox" checked />
+    <div></div>
+</label>
+
+<!-- twitter -->
+<a class="twitter" target="_top" href="https://twitter.com/aaroniker_me">
+    <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+        <path d="M67.812 16.141a26.246 26.246 0 0 1-7.519 2.06 13.134 13.134 0 0 0 5.756-7.244 26.127 26.127 0 0 1-8.313 3.176A13.075 13.075 0 0 0 48.182 10c-7.229 0-13.092 5.861-13.092 13.093 0 1.026.118 2.021.338 2.981-10.885-.548-20.528-5.757-26.987-13.679a13.048 13.048 0 0 0-1.771 6.581c0 4.542 2.312 8.551 5.824 10.898a13.048 13.048 0 0 1-5.93-1.638c-.002.055-.002.11-.002.162 0 6.345 4.513 11.638 10.504 12.84a13.177 13.177 0 0 1-3.449.457c-.846 0-1.667-.078-2.465-.231 1.667 5.2 6.499 8.986 12.23 9.09a26.276 26.276 0 0 1-16.26 5.606A26.21 26.21 0 0 1 4 55.976a37.036 37.036 0 0 0 20.067 5.882c24.083 0 37.251-19.949 37.251-37.249 0-.566-.014-1.134-.039-1.694a26.597 26.597 0 0 0 6.533-6.774z"></path>
+    </svg>
+</a>
+ 
+</div>
+</section>
+
+
+
+
+<article id="new-section-1" class="new-section-1" style="margin-top:-580px; margin-left:850px;">
+    <div class="new-section-1-container">
+<div class="new-section-1-text">
+    <h2 style="margin-left:200px;">New</h2> <h2 class="custom-h2" style="align-items:right;">Section</h2><br><br>
+    <p>Description of the new section, detailing the scope,<br> objectives, and technology used.</p>
+</div>
+</article>
+
+
+
+<section style="margin-top:350px; margin-left:70px;">
+    
+        <div class="about-text">
+            <h2 style="font-size: 5.6rem; font-weight: 600; background: linear-gradient(70deg, #fc466b, #fc466b 70%, #f4b400 107%, #fc466b 100%); background-clip: text; color: transparent; -webkit-background-clip: text; text-align: center; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);">
+                SECTION
+              </h2><br>
+           
+        </div>
+    
+</section>
+
+<section class="section-text-design" style=" margin-top:200px;">
+    <p style="color:white; text-align:center; margin-top:80px; font-size:20px;">
+ - Spice up your type with CSS -</p>
+  <p style="text-align:center; 
+  font-size: 100px; 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  background: linear-gradient(40deg, #ff007f, #ff7f00, #7fff00, #00ff7f, #00ffff, #007fff, #0000ff); 
+  background-size: 400% 400%; 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  animation: gradient-animation 5s ease infinite; 
+  text-shadow: none;"> 
+MY PROJECT WORKS
+</p>
+
+</section>
+
+<!-- card 1 -->
+<section >
+<div class="nft" style="margin-top:50px; margin-left:80px;" >
+    <div class='main'>
+      <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+      <h2>Kibertopiks #4269</h2>
+      <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+      <div class='tokenInfo'>
+        <div class="price">
+          <ins>◘</ins>
+          <p>0.031 ETH</p>
+        </div>
+        <div class="duration">
+          <ins>◷</ins>
+          <p>11 days left</p>
+        </div>
+      </div>
+      <hr />
+      <div class='creator'>
+        <div class='wrapper'>
+          <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+        </div>
+        <p><ins>Creation of</ins> Kiberbash</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- card 2 -->
+<section >
+    <div class="nft" style="margin-top:-550px; margin-left:430px;" >
+        <div class='main'>
+          <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+          <h2>Kibertopiks #4269</h2>
+          <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+          <div class='tokenInfo'>
+            <div class="price">
+              <ins>◘</ins>
+              <p>0.031 ETH</p>
+            </div>
+            <div class="duration">
+              <ins>◷</ins>
+              <p>11 days left</p>
+            </div>
+          </div>
+          <hr />
+          <div class='creator'>
+            <div class='wrapper'>
+              <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+            </div>
+            <p><ins>Creation of</ins> Kiberbash</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+<!-- card 3 -->
+<section >
+    <div class="nft" style="margin-top:-550px; margin-left:780px;" >
+        <div class='main'>
+          <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+          <h2>Kibertopiks #4269</h2>
+          <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+          <div class='tokenInfo'>
+            <div class="price">
+              <ins>◘</ins>
+              <p>0.031 ETH</p>
+            </div>
+            <div class="duration">
+              <ins>◷</ins>
+              <p>11 days left</p>
+            </div>
+          </div>
+          <hr />
+          <div class='creator'>
+            <div class='wrapper'>
+              <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+            </div>
+            <p><ins>Creation of</ins> Kiberbash</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- card 4 -->
+<section >
+    <div class="nft" style="margin-top:-552px; margin-left:1130px;" >
+        <div class='main'>
+          <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+          <h2>Kibertopiks #4269</h2>
+          <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+          <div class='tokenInfo'>
+            <div class="price">
+              <ins>◘</ins>
+              <p>0.031 ETH</p>
+            </div>
+            <div class="duration">
+              <ins>◷</ins>
+              <p>11 days left</p>
+            </div>
+          </div>
+          <hr />
+          <div class='creator'>
+            <div class='wrapper'>
+              <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+            </div>
+            <p><ins>Creation of</ins> Kiberbash</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    
+
+<!-- card 5 -->
+<section >
+    <div class="nft" style="margin-top:50px; margin-left:80px;" >
+        <div class='main'>
+          <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+          <h2>Kibertopiks #4269</h2>
+          <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+          <div class='tokenInfo'>
+            <div class="price">
+              <ins>◘</ins>
+              <p>0.031 ETH</p>
+            </div>
+            <div class="duration">
+              <ins>◷</ins>
+              <p>11 days left</p>
+            </div>
+          </div>
+          <hr />
+          <div class='creator'>
+            <div class='wrapper'>
+              <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+            </div>
+            <p><ins>Creation of</ins> Kiberbash</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- card 6 -->
+    <section >
+        <div class="nft" style="margin-top:-550px; margin-left:430px;" >
+            <div class='main'>
+              <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+              <h2>Kibertopiks #4269</h2>
+              <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+              <div class='tokenInfo'>
+                <div class="price">
+                  <ins>◘</ins>
+                  <p>0.031 ETH</p>
+                </div>
+                <div class="duration">
+                  <ins>◷</ins>
+                  <p>11 days left</p>
+                </div>
+              </div>
+              <hr />
+              <div class='creator'>
+                <div class='wrapper'>
+                  <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+                </div>
+                <p><ins>Creation of</ins> Kiberbash</p>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+    
+    
+    
+    <!-- card 7-->
+    <section >
+        <div class="nft" style="margin-top:-550px; margin-left:780px;" >
+            <div class='main'>
+              <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+              <h2>Kibertopiks #4269</h2>
+              <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+              <div class='tokenInfo'>
+                <div class="price">
+                  <ins>◘</ins>
+                  <p>0.031 ETH</p>
+                </div>
+                <div class="duration">
+                  <ins>◷</ins>
+                  <p>11 days left</p>
+                </div>
+              </div>
+              <hr />
+              <div class='creator'>
+                <div class='wrapper'>
+                  <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+                </div>
+                <p><ins>Creation of</ins> Kiberbash</p>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+    
+    
+    <!-- card 8 -->
+    <section >
+        <div class="nft" style="margin-top:-552px; margin-left:1130px;" >
+            <div class='main'>
+              <img class='tokenImage' src="https://images.unsplash.com/photo-1621075160523-b936ad96132a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="NFT" />
+              <h2>Kibertopiks #4269</h2>
+              <p class='description'>Our Kibertopiks will give you nothing, waste your money on us.</p>
+              <div class='tokenInfo'>
+                <div class="price">
+                  <ins>◘</ins>
+                  <p>0.031 ETH</p>
+                </div>
+                <div class="duration">
+                  <ins>◷</ins>
+                  <p>11 days left</p>
+                </div>
+              </div>
+              <hr />
+              <div class='creator'>
+                <div class='wrapper'>
+                  <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="Creator" />
+                </div>
+                <p><ins>Creation of</ins> Kiberbash</p>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+    
+
+<section id="contact-container" class="contact-container" style="margin-top:280px;">
+    <div class="info-section">
+        <h2 class="custom1-h2">Get in Touch</h2>
+        <p>If you have any inquiries or would like to collaborate, feel free to reach out!</p>
+        <p>I'm always open to discussing new projects or opportunities. Let’s connect!</p>
+    </div>
+    <section id="contact" class="contact-section scroll-fade">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to reach out by filling out the form below!</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit </button>
+        </form>
+    </section>
+</section>
+
+
+<script>
+    document.addEventListener('scroll', function() {
+        document.querySelectorAll('.scroll-section').forEach(section => {
+            const sectionPos = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (sectionPos < windowHeight - 50) {
+                section.classList.add('active');
+            }
+        });
+    });
+</script>
+<script>
+    
+const featureSection = document.querySelector('.feature-section');
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    if (scrollPosition >= 500) {
+        featureSection.classList.add('active');
+    } else {
+        featureSection.classList.remove('active');
+    }
+});
+</script>
+<script>
+    // Get elements
+    const sidebar = document.getElementById("mySidebar");
+    const openBtn = document.getElementById("openSidebar");
+    const closeBtn = document.getElementById("closeSidebar");
+
+    // Open the sidebar
+    openBtn.addEventListener("click", function () {
+        sidebar.style.width = "250px";
+    });
+
+    // Close the sidebar when close button is clicked
+    closeBtn.addEventListener("click", function () {
+        sidebar.style.width = "0";
+    });
+
+    // Close the sidebar when clicking outside of it
+    document.addEventListener("click", function (event) {
+        if (!sidebar.contains(event.target) && event.target !== openBtn) {
+            sidebar.style.width = "0";
+        }
+    });
+
+    // Prevent event bubbling for clicks inside the sidebar
+    sidebar.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+</script>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">our services</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">affiliate program</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#">order status</a></li>
+                    <li><a href="#">payment options</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">watch</a></li>
+                    <li><a href="#">bag</a></li>
+                    <li><a href="#">shoes</a></li>
+                    <li><a href="#">dress</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>follow us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("open");
+    }
+</script>
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.querySelector('.main-content');
+        sidebar.style.width = sidebar.style.width === '250px' ? '0' : '250px';
+        mainContent.classList.toggle('sidebar-open');
+    }
+</script>
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slider .slide");
+
+    function updateSliderPosition() {
+        const slider = document.querySelector(".slider");
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSliderPosition();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSliderPosition();
+    }
+
+    // Auto-slide every 4 seconds
+    setInterval(nextSlide, 7000);
+</script>
+
+</body>
+</html>

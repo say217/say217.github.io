@@ -1,0 +1,191 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,400");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Asap', 'Poppins', sans-serif;
+  text-shadow: #000 0 0 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 80vh;
+  background: #111;
+}
+
+@media (min-width: 1024px) {
+  .main-container {
+    flex-direction: row;
+  }
+}
+
+.image-card {
+  position: relative;
+  flex: calc(100vw / 6) 1 1;
+  background-size: cover;
+  overflow: hidden;
+  filter: saturate(90%);
+  transition: 1s;
+}
+
+.image-card:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(25deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, 0));
+}
+
+.image-card:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  animation: borderPulse 5s infinite;
+}
+
+@media (min-width: 1024px) {
+  .image-card:not(:last-child) {
+    border-right: 1px solid #ccc;
+    border-bottom: none;
+  }
+}
+
+.image-card:hover {
+    flex-basis: 50%; /* Increase the flex-basis for more focus */
+    filter: saturate(120%);
+    transform: scale(1.1); /* Scale up the image slightly */
+    z-index: 1; /* Bring the hovered card to the front */
+    transition: transform 0.4s ease, flex-basis 0.4s ease, filter 0.4s ease;
+  }
+  
+  @media (min-width: 1024px) {
+    .image-card:hover {
+      flex-basis: 80%; /* Increase size in larger screens */
+      transform: scale(1.2); /* Slightly larger zoom for hover */
+    }
+  
+    .overlay-quote {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+
+
+.image-card:nth-child(1) {
+  background-image: url("https://assets.codegrip.tech/wp-content/uploads/2020/08/17213907/coding-on-a-computer.jpg");
+  background-position: 72% 35%;
+}
+
+.image-card:nth-child(2) {
+  background-image: url("https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/464_464/1610983732.jpg");
+  background-position: 60% 8%;
+}
+
+.image-card:nth-child(3) {
+  background-image: url("https://styles.redditmedia.com/t5_8av7f1/styles/communityIcon_maxwa12awgwa1.png");
+  background-position: 52% 8%;
+}
+
+.image-card:nth-child(4) {
+  background-image: url("https://wallpaperaccess.com/full/1596.jpg");
+  background-position: 45% 8%;
+}
+
+.image-card:nth-child(5) {
+  background-image: url("https://wallpaperaccess.com/full/3771262.jpg");
+  background-position: 45% 25%;
+}
+
+.image-card:nth-child(6) {
+  background-image: url("https://www.howtogeek.com/wp-content/uploads/2021/06/hacker_header.jpg?height=200p&trim=2,2,2,2");
+  background-position: 65% 2%;
+}
+
+.overlay-quote {
+  position: absolute;
+  color: #fff;
+  bottom: 35%;
+  left: 10%; /* Adjust this for more precise placement */
+  width: 20vw; /* Adjust the width if needed */
+  opacity: 1;
+  transition: 1s;
+  transform: translateX(0); /* Reset horizontal translation */
+}
+
+@media (min-width: 512px) {
+  .overlay-quote {
+    left: 10%; /* Adjust for tablet or mobile view */
+    bottom: 35%;
+    width: 20vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .overlay-quote {
+    left: 10%; /* Adjust for larger screens */
+    bottom: 35%;
+    width: 30vw;
+  }
+}
+
+
+.overlay-quote p {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.7rem;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.overlay-quote p:before,
+.overlay-quote p:after {
+  position: absolute;
+  font-size: 5.5rem;
+  opacity: 0.6;
+}
+
+.overlay-quote p:before {
+  content: "“";
+  top: 4rem;
+  left: -2rem;
+}
+
+.overlay-quote p:after {
+  content: "”";
+  bottom: 2rem;
+  right: -2rem;
+}
+
+.overlay-quote span {
+  position: absolute;
+  bottom: -2rem;
+  right: 0;
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.overlay-quote span:before {
+  content: "—";
+  margin-right: 0.7rem;
+}
+
+@keyframes borderPulse {
+  0%,
+  100% {
+    border-color: rgba(204, 204, 204, 1);
+  }
+
+  25%,
+  75% {
+    border-color: rgba(204, 204, 255, 0.9);
+  }
+
+  50% {
+    border-color: rgba(204, 204, 255, 0.5);
+  }
+}
